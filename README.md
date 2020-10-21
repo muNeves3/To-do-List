@@ -16,3 +16,23 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     <li>ReactJS :rocket:</li>
     <li>React-Hooks :atom:</li>
 </ul>
+
+### How to run it in you computer :grey_question:
+
+Clone the repository
+
+```sh
+git clone https://github.com/muNeves3/To-do-List
+```
+
+Go to the copy
+
+```sh
+cd To-do-List
+```
+
+Run the project
+
+```sh
+yarn start
+```
