@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 </p>
 
 <p align="center">
-    ![GifExample](https://media.giphy.com/media/Gm03B9TfUeoMKT5lmd/giphy.gif)
+    ![GifExample](GifExample.gif)
 </p>
 
 ### Technologies :rocket:
