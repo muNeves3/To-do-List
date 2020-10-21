@@ -8,13 +8,15 @@
     "@testing-library/user-event": "^7.1.2",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
-    "react-scripts": "3.4.4"
+    "react-icons": "^3.11.0",
+    "react-scripts": "3.4.4",
+    "styled-components": "^5.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "node node_modules/.bin/react-scripts test",
+    "eject": "node node_modules/.bin/react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"

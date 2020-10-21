@@ -1,0 +1,27 @@
+.todo {
+    width: 200px;
+    height: 85px;
+    color: #000;
+    align-items: center;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    padding: 3px 10px;
+    margin-bottom: 10px;
+}
+
+.lateral-bar {
+    height: 80px;
+    width: 5px;
+    border-radius: 15px;
+    margin-left: -5px;
+}
+
+.text{
+    font-size: 10px;
+    font-family: sans-serif;
+}
