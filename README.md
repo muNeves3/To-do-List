@@ -7,9 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     <img src="https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&style=for-the-badge&logoColor=white" />
 </p>
 
-<p align="center">
-    ![GifExample](./assets/GifExample.gif)
-</p>
+![](./assets/GifExample.gif)
 
 ### Technologies :rocket:
 
