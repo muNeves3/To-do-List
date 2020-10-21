@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 </p>
 
 <p align="center">
-    ![GifExample](GifExample.gif)
+    ![GifExample](./assets/GifExample.gif)
 </p>
 
 ### Technologies :rocket:
