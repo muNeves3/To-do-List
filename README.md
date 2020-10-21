@@ -4,7 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 **Is a simple app where you can add your tasks/chores**
 
 <p align="center">
+    <a href="https://jovial-swanson-ab7c8a.netlify.app/">
     <img src="https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&style=for-the-badge&logoColor=white" />
+    </a>
 </p>
 
 
