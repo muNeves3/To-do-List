@@ -3,7 +3,7 @@ import React, { createContext, useState, useContext } from 'react';
 const TodoContext = createContext();
 
 export default function TodoProvider({ children }) {
-    const [todo, setTodo] = useState([]);
+    const [todo, setTodo] = useState("");
 
     return(
         <TodoContext.Provider

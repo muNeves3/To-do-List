@@ -1,57 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 
 import './Todo.css';
 
 import FormElement from './Components/FormElement';
 import TodoElement from './Components/TodoElement';
-import { useTodo } from './Context/Todo';
+
+
 
 export default function Todo() {
-    const {todo, setTodo}= useTodo(JSON.parse(localStorage.getItem('list_todos')) ||[]);
+    const [todos, setTodos] = useState(JSON.parse(localStorage.getItem('list_todos')) || []);
 
-    function handleAddTodo(todos) {
-        const AddTodos = [...todo, { todos }];
-        setTodo(AddTodos);
+    function handleAddTodo(todo) {
+        const AddTodos = [...todos, { todo }];
+        setTodos(AddTodos);
         saveToStorage();
     }
 
     function handleDoTodo(index) {
-        const doneTodos = [...todo];
+        const doneTodos = [...todos];
         if(doneTodos[index].isCompleted === true) {
             doneTodos[index].isCompleted = false;
-            setTodo(doneTodos);
+            setTodos(doneTodos);
             return;
         }
         doneTodos[index].isCompleted = true;
-        setTodo(doneTodos);
+        setTodos(doneTodos);
         saveToStorage();
     }
 
     function deleteTodo(index) {
-        const deletedTodos = [...todo];
+        const deletedTodos = [...todos];
         deletedTodos.splice(index, 1);
-        setTodo(deletedTodos);
+        setTodos(deletedTodos);
         saveToStorage();
     };
 
     function saveToStorage(){
-        localStorage.setItem('list_todos', JSON.stringify(todo));
+        localStorage.setItem('list_todos', JSON.stringify(todos));
     }
 
     return(
-            <div id="content">
-                <div className="todo-list">
-                {todo.map((todo, index) => (
-                    <TodoElement
-                        key={index}
-                        index={index}
-                        todo={todo}
-                        completeTodo={handleDoTodo}
-                        removeTodo={deleteTodo}
-                    />
-            ))}
-            <FormElement addTodo={handleAddTodo} />
-                </div>
-            </div>
+        <div id="content">
+            <div className="todo-list">
+             {todos.map((todo, index) => (
+                <TodoElement
+                    key={index}
+                    index={index}
+                    todo={todo}
+                    completeTodo={handleDoTodo}
+                    removeTodo={deleteTodo}
+                    saveToStorage={saveToStorage}
+                />
+        ))}
+        <FormElement addTodo={handleAddTodo} />
+      </div>
+        </div>
     );
 }

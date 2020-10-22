@@ -1,10 +1,10 @@
-import React from 'react';
-
-import './FormElement.css'
+import React, { useState } from 'react';
 import { useTodo } from '../../Context/Todo';
 
+import './FormElement.css'
+
 export default function FormElement({addTodo}) {
-    const {todo, setTodo} = useTodo("");
+    const [todo, setTodo] = useState([]);
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -13,7 +13,6 @@ export default function FormElement({addTodo}) {
         }
         addTodo(todo);
         setTodo("");
-        localStorage.setItem('list_todos', JSON.stringify(todo));
     }
 
     return (
