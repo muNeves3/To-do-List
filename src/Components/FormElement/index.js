@@ -4,7 +4,7 @@ import './FormElement.css'
 import { useTodo } from '../../Context/Todo';
 
 export default function FormElement({addTodo}) {
-    const {todo, setTodo} = useTodo();
+    const {todo, setTodo} = useTodo("");
 
     function handleSubmit(event) {
         event.preventDefault();
