@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { useTodo } from '../../Context/Todo';
 
 import './FormElement.css'
 
-export default function FormElement({addTodo}) {
+export default function FormElement({addTodo, saveToStorage}) {
     const [todo, setTodo] = useState([]);
 
     function handleSubmit(event) {
@@ -13,6 +12,7 @@ export default function FormElement({addTodo}) {
         }
         addTodo(todo);
         setTodo("");
+        saveToStorage();
     }
 
     return (

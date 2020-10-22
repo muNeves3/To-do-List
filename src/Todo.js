@@ -5,8 +5,6 @@ import './Todo.css';
 import FormElement from './Components/FormElement';
 import TodoElement from './Components/TodoElement';
 
-
-
 export default function Todo() {
     const [todos, setTodos] = useState(JSON.parse(localStorage.getItem('list_todos')) || []);
 
@@ -49,10 +47,10 @@ export default function Todo() {
                     todo={todo}
                     completeTodo={handleDoTodo}
                     removeTodo={deleteTodo}
-                    saveToStorage={saveToStorage}
+                    saveToStorage={saveToStorage}   
                 />
         ))}
-        <FormElement addTodo={handleAddTodo} />
+        <FormElement addTodo={handleAddTodo} saveToStorage={saveToStorage}/>
       </div>
         </div>
     );
