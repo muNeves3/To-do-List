@@ -4,7 +4,7 @@ import { IoIosTrash} from 'react-icons/io';
 
 import './TodoElement.css'
 
-export default function TodoElement({ todo, index, completeTodo, removeTodo, editTodo }) {
+export default function TodoElement({ todo, index, completeTodo, removeTodo }) {
     function getRandomColor() {
         var letters = "0123456789ABCDEF";
         var color = "#";
@@ -20,7 +20,7 @@ export default function TodoElement({ todo, index, completeTodo, removeTodo, edi
         >
             <div className="lateral-bar" style={{background: getRandomColor()}}></div>
             <h3 className="text">
-            {todo.todo}
+            {todo.title}
             </h3>
             <div className="changes">
                 <input type="checkbox" onChange={() => completeTodo(index)} value={todo.isCompleted}/>
